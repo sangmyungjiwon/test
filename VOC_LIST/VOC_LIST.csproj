@@ -1,0 +1,507 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A94EB8F5-2824-4D5A-B62E-88809ABE4D74}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VOC_LIST</RootNamespace>
+    <AssemblyName>VOC_LIST</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CCM_SMS, Version=1.0.5721.26813, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\CESNET2.0\CCM_SMS.exe</HintPath>
+    </Reference>
+    <Reference Include="CES.DbConnection">
+      <HintPath>C:\Program Files (x86)\CESNET2.0\CES.DbConnection.dll</HintPath>
+    </Reference>
+    <Reference Include="CES.DBConnString">
+      <HintPath>C:\Program Files (x86)\CESNET2.0\CES.DBConnString.dll</HintPath>
+    </Reference>
+    <Reference Include="CES.FUNCTION">
+      <HintPath>C:\Program Files (x86)\CESNET2.0\CES.FUNCTION.dll</HintPath>
+    </Reference>
+    <Reference Include="Cesco.FW.Global.DBAdapter, Version=1.0.6445.30285, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Cesco.FW.Global.DBAdapter.1.1.0\lib\net35\Cesco.FW.Global.DBAdapter.dll</HintPath>
+    </Reference>
+    <Reference Include="Cesco.FW.Global.DevExpressUtil, Version=1.0.6423.24778, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Cesco.FW.Global.DevExpressUtil.1.0.0\lib\net35\Cesco.FW.Global.DevExpressUtil.dll</HintPath>
+    </Reference>
+    <Reference Include="Cesco.FW.Global.UCControls, Version=1.0.6423.24779, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Cesco.FW.Global.UCControls.1.0.0\lib\net35\Cesco.FW.Global.UCControls.dll</HintPath>
+    </Reference>
+    <Reference Include="Cesco.FW.Global.Util, Version=1.0.6423.24778, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Cesco.FW.Global.Util.1.0.0\lib\net35\Cesco.FW.Global.Util.dll</HintPath>
+    </Reference>
+    <Reference Include="CESMM.Connection">
+      <HintPath>C:\Program Files (x86)\CESNET2.0\CESINSA\CESMM.Connection.dll</HintPath>
+    </Reference>
+    <Reference Include="CommonFunc">
+      <HintPath>C:\Program Files (x86)\CESNET2.0\CommonFunc.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v12.2, Version=12.2.18.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v12.2, Version=12.2.18.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v12.2.Core, Version=12.2.18.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v12.2.Core, Version=12.2.18.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v12.2, Version=12.2.18.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v12.2, Version=12.2.18.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v12.2, Version=12.2.18.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v12.2, Version=12.2.18.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v12.2, Version=12.2.18.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v12.2, Version=12.2.18.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v12.2, Version=12.2.18.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v12.2, Version=12.2.18.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="EApprovalFormMng">
+      <HintPath>C:\Program Files (x86)\CESNET2.0\GroupWare\EApprovalFormMng.dll</HintPath>
+    </Reference>
+    <Reference Include="EApprovalForms">
+      <HintPath>C:\Program Files (x86)\CESNET2.0\GroupWare\EApprovalForms.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\packages\Cesco.FW.Global.Util.1.0.0\lib\net35\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.Excel">
+      <HintPath>C:\Program Files (x86)\CESNET2.0\Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.WORKPACKAGERV3Lib">
+      <HintPath>..\packages\Cesco.FW.Global.Util.1.0.0\lib\net35\Interop.WORKPACKAGERV3Lib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="VOC_CategoryMngerSet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VOC_CategoryMngerSet.Designer.cs">
+      <DependentUpon>VOC_CategoryMngerSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VOC_CurrentState.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VOC_CurrentState.Designer.cs">
+      <DependentUpon>VOC_CurrentState.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VOC_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VOC_Form.Designer.cs">
+      <DependentUpon>VOC_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VOC_FrmImageView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VOC_FrmImageView.Designer.cs">
+      <DependentUpon>VOC_FrmImageView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VOC_IssueSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VOC_IssueSearch.Designer.cs">
+      <DependentUpon>VOC_IssueSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VOC_TotalStateMng.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VOC_TotalStateMng.Designer.cs">
+      <DependentUpon>VOC_TotalStateMng.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VOC_TotalStateMng_Category.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VOC_TotalStateMng_Category.Designer.cs">
+      <DependentUpon>VOC_TotalStateMng_Category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VOC_TotalStatMng_List.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VOC_TotalStatMng_List.Designer.cs">
+      <DependentUpon>VOC_TotalStatMng_List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VOC_UserCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VOC_UserCheck.designer.cs">
+      <DependentUpon>VOC_UserCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Person.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VOC_CategoryManage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VOC_CategoryManage.Designer.cs">
+      <DependentUpon>VOC_CategoryManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VOC_CategoryStandardManage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VOC_CategoryStandardManage.Designer.cs">
+      <DependentUpon>VOC_CategoryStandardManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VOC_FrmCategoryChg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VOC_FrmCategoryChg.Designer.cs">
+      <DependentUpon>VOC_FrmCategoryChg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VOC_StateList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VOC_StateList.Designer.cs">
+      <DependentUpon>VOC_StateList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VOC_ProcessMng.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VOC_ProcessMng.Designer.cs">
+      <DependentUpon>VOC_ProcessMng.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VOC_FrmMemoView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VOC_FrmMemoView.Designer.cs">
+      <DependentUpon>VOC_FrmMemoView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VOC_DivideMng.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VOC_DivideMng.Designer.cs">
+      <DependentUpon>VOC_DivideMng.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VOC_DivideList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VOC_DivideList.Designer.cs">
+      <DependentUpon>VOC_DivideList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VOC_TemplateManage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VOC_TemplateManage.Designer.cs">
+      <DependentUpon>VOC_TemplateManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VOC_VoluntaryReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VOC_VoluntaryReport.Designer.cs">
+      <DependentUpon>VOC_VoluntaryReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VOC_TotalManage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VOC_TotalManage.Designer.cs">
+      <DependentUpon>VOC_TotalManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VOC_Form_Cate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VOC_Form_Cate.Designer.cs">
+      <DependentUpon>VOC_Form_Cate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VOC_TotalStateMng_Category_Detail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VOC_TotalStateMng_Category_Detail.Designer.cs">
+      <DependentUpon>VOC_TotalStateMng_Category_Detail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VOC_Form_Cate_Detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VOC_Form_Cate_Detail.Designer.cs">
+      <DependentUpon>VOC_Form_Cate_Detail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VOC_ProcessMng_test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VOC_ProcessMng_test.Designer.cs">
+      <DependentUpon>VOC_ProcessMng_test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VOC_DeleteManage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VOC_DeleteManage.Designer.cs">
+      <DependentUpon>VOC_DeleteManage.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="VOC_CategoryMngerSet.resx">
+      <DependentUpon>VOC_CategoryMngerSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VOC_CurrentState.resx">
+      <DependentUpon>VOC_CurrentState.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VOC_Form.resx">
+      <DependentUpon>VOC_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VOC_FrmImageView.resx">
+      <DependentUpon>VOC_FrmImageView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VOC_IssueSearch.resx">
+      <DependentUpon>VOC_IssueSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VOC_TotalStateMng.resx">
+      <DependentUpon>VOC_TotalStateMng.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VOC_TotalStateMng_Category.resx">
+      <DependentUpon>VOC_TotalStateMng_Category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VOC_TotalStatMng_List.resx">
+      <DependentUpon>VOC_TotalStatMng_List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VOC_UserCheck.resx">
+      <DependentUpon>VOC_UserCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="VOC_CategoryManage.resx">
+      <DependentUpon>VOC_CategoryManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VOC_CategoryStandardManage.resx">
+      <DependentUpon>VOC_CategoryStandardManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VOC_FrmCategoryChg.resx">
+      <DependentUpon>VOC_FrmCategoryChg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VOC_StateList.resx">
+      <DependentUpon>VOC_StateList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VOC_ProcessMng.resx">
+      <DependentUpon>VOC_ProcessMng.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VOC_FrmMemoView.resx">
+      <DependentUpon>VOC_FrmMemoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VOC_DivideMng.resx">
+      <DependentUpon>VOC_DivideMng.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VOC_DivideList.resx">
+      <DependentUpon>VOC_DivideList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VOC_TemplateManage.resx">
+      <DependentUpon>VOC_TemplateManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VOC_VoluntaryReport.resx">
+      <DependentUpon>VOC_VoluntaryReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VOC_TotalManage.resx">
+      <DependentUpon>VOC_TotalManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VOC_Form_Cate.resx">
+      <DependentUpon>VOC_Form_Cate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VOC_TotalStateMng_Category_Detail.resx">
+      <DependentUpon>VOC_TotalStateMng_Category_Detail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VOC_Form_Cate_Detail.resx">
+      <DependentUpon>VOC_Form_Cate_Detail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VOC_ProcessMng_test.resx">
+      <DependentUpon>VOC_ProcessMng_test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VOC_DeleteManage.resx">
+      <DependentUpon>VOC_DeleteManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4%28x86 및 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1416917852_resultset_next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1416922992_email.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440501202_phone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1431514906_document-new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1433240048_floppy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1428408983_text_list_bullets.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1417760844_Eye.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1433243993_pin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1433243993_pin1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1431597295_expand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1431597295_expand1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1441364237_stock_placeholder-picture-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1441364346_kontact-notes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_211.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1428408983_text_list_bullets1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1432803633_page_excel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1432186247_folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1416992055_order.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1418391084_save_accept.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\category.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1421221724_edit.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
